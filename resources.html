@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <title>Document</title> -->
+    <script src="https://kit.fontawesome.com/0f8e409688.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <nav>
+        <a href="#physics"><i class="fa-regular fa-lightbulb"></i></a>
+        <a href="#chemistry"><i class="fa-solid fa-flask-vial"></i></a>
+        <a href="#Biology"><i class="fa-solid fa-dna"></i></a>
+        <a href="#Sampletest"><i class="fa-solid fa-ice-cream"></i></a>
+    </nav>
+
+
+    <div class='main'>
+        <h1>CHOOSE SUBJECT</h1>
+
+        <section id='physics'>
+            <h1>Physics</h1>
+            <ul>
+                <li><a href="notes/Light.pdf">Light</a></li>
+                <li><a href="notes/humaneye.pdf">Human Eye</a></li>
+                <li><a href="notes/electricity.pdf">Electricity</a></li>
+                <li><a href="notes/magneticeffects.pdf">Magnetic Effects</a></li>
+            </ul>
+
+
+
+        </section>
+
+        <section id='chemistry'>
+            <h1>Chemistry</h1>
+            <ul>
+                <li><a href="notes/chemicalrecn.pdf">Chemical Reaction</a></li>
+                <li><a href="notes/acids.pdf">Acids,Bases and Salt</a></li>
+                <li><a href="notes/metals.pdf">Metal and non metal</a></li>
+                <li><a href="notes/Carbon.pdf">Carbon and its Compounds</a></li>
+            </ul>
+        </section>
+
+        <section id='Biology'>
+            <h1>Biology</h1>
+            <ul>
+                <li><a href="notes/Life.pdf">Life Process</a></li>
+                <li><a href="notes/Control.pdf">Control and Coordination</a></li>
+                <li><a href="notes/reproduction.pdf">How do Organism Reproduce</a></li>
+                <li><a href="notes/Heredity.pdf">Heredity</a></li>
+            </ul>
+        </section>
+
+        <section id='Sampletest'>
+            <h1>Sample Test</h1>
+            <ul>
+                <li><a href="notes/sample_paper1.pdf">Sample Paper1</a></li>
+                <li><a href="notes/sample_paper2.pdf">Sample Paper2</a></li>
+            </ul>
+
+        </section>
+    </div>
+
+
+
+</body>
+
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    :root {
+        --primary-color: #D96AA7;
+        --secondary-color: #422C73;
+        --complimentary-color: #88BFB5;
+        --contrast-color: #F2E527;
+        --light-color: #D2A9D9;
+    }
+
+    .main {
+        background: #F2E527;
+        min-height: 100vh;
+        font-family: Montserrat, sans-serif;
+        margin-left: 80px;
+    }
+
+    .main h1 {
+
+        color: #fff;
+        font-weight: bold;
+        padding: 30px;
+        text-align: center;
+
+
+
+    }
+
+    .main ul li {
+        list-style: none;
+        padding-top: 10px;
+        padding-left: 20px;
+        margin-left: 20px;
+        margin-right: 20px;
+
+    }
+
+    .main ul li a {
+        margin-left: 20px;
+        color: #fff;
+        font-weight: 100;
+        padding: 10px;
+
+
+    }
+
+    nav a {
+        font-size: 40px;
+        color: #fff;
+        text-decoration: none;
+        padding: 20px;
+        text-align: center;
+    }
+
+    nav {
+        width: 80px;
+        position: fixed;
+        left: 0;
+        z-index: 50;
+        display: flex;
+        justify-content: space-around;
+        flex-direction: column;
+        height: 100vh;
+        background: var(--secondary-color);
+    }
+
+    section {
+        position: absolute;
+        top: 0;
+        height: 100vh;
+        width: 0;
+        opacity: 0;
+        transition: all ease-in .5s;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    section h1 {
+        color: #fff;
+        font-size: 50px;
+        text-transform: uppercase;
+        opacity: 0;
+    }
+
+    section a {
+        font-size: 20px;
+        font-weight: lighter;
+        color: #fff;
+        text-decoration: none;
+        padding: 20px;
+        text-align: center;
+    }
+
+
+    /* Styles applied on trigger */
+    section:target {
+        opacity: 1;
+        position: absolute;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 10;
+    }
+
+    section:target h1 {
+        opacity: 0;
+        animation: 2s fadeIn forwards .5s;
+    }
+
+    #physics {
+        background: var(--primary-color);
+    }
+
+    #chemistry {
+        background: var(--complimentary-color);
+    }
+
+    #biology {
+        background: var(--contrast-color);
+    }
+
+    #Sampletest {
+        background: var(--light-color);
+    }
+
+    @keyframes fadeIn {
+        100% {
+            opacity: 1
+        }
+    }
+</style>
+
+</html>
